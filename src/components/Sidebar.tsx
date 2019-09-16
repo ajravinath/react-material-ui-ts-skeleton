@@ -14,6 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import Datatable from './DataTable/CustomDataTable';
 import { Link, Route } from 'react-router-dom';
 import { drawerWidth } from './../common/constants';
 
@@ -52,7 +53,11 @@ const Sidebar: React.FC<SidebarProps> = props => {
       path: '/',
       exact: true,
       name: 'Dashboard',
-      component: () => <div>Dashboard</div>
+      component: () => (
+        <div>
+          <Datatable />
+        </div>
+      )
     },
     {
       path: '/users',
